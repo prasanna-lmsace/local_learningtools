@@ -107,6 +107,10 @@ jobs:
         if: ${{ always() }}
         run: moodle-plugin-ci grunt
 
+      - name: Grunt Diff
+        if: ${{ always() }}
+        run: moodle-plugin-ci gruntdiff
+
       - name: PHPUnit tests
         if: ${{ always() }}
         run: moodle-plugin-ci phpunit
