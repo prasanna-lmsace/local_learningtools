@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<XMLDB PATH="local/learningtools/ltool/bookmarks/db" VERSION="20210721" COMMENT="XMLDB file for Moodle local/learningtools/ltool/bookmarks"
+<XMLDB PATH="local/learningtools/ltool/bookmarks/db" VERSION="20220224" COMMENT="XMLDB file for Moodle local/learningtools/ltool/bookmarks."
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+    xsi:noNamespaceSchemaLocation="../../../../../lib/xmldb/xmldb.xsd"
 >
   <TABLES>
-    <TABLE NAME="learningtools_bookmarks" COMMENT="Store the all learning tools in the list of user bookmarks">
+    <TABLE NAME="ltool_bookmarks_data" COMMENT="Store the all learning tools in the list of user bookmarks">
       <FIELDS>
         <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
         <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false"/>
@@ -14,7 +14,7 @@
         <FIELD NAME="contextid" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false"/>
         <FIELD NAME="pagetype" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false"/>
         <FIELD NAME="pagetitle" TYPE="char" LENGTH="500" NOTNULL="false" SEQUENCE="false"/>
-        <FIELD NAME="pageurl" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false"/>
+        <FIELD NAME="pageurl" TYPE="text" NOTNULL="false" SEQUENCE="false"/>
         <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false"/>
         <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false"/>
       </FIELDS>
@@ -23,5 +23,4 @@
       </KEYS>
     </TABLE>
   </TABLES>
-
 </XMLDB>
