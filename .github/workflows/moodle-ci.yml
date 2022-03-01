@@ -109,7 +109,7 @@ jobs:
 
       - name: Grunt Diff
         if: ${{ always() }}
-        run: moodle-plugin-ci grunt --format=gruntdiff
+        run: moodle-plugin-ci checkstyle --format=gruntdiff
 
       # - name: PHPUnit tests
       #   if: ${{ always() }}
