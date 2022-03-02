@@ -32,7 +32,7 @@ jobs:
           #   moodle-branch: 'MOODLE_311_STABLE'
           #   database: 'pgsql'
           - php: '7.4'
-            moodle-branch: 'MOODLE_311_STABLE'
+            moodle-branch: 'master'
             database: 'mariadb'
           # - php: '7.4'
           #   moodle-branch: 'MOODLE_311_STABLE'
@@ -109,7 +109,7 @@ jobs:
 
       - name: Grunt Diff
         if: ${{ always() }}
-        run: moodle-plugin-ci grunt -t gherkinlint -t amd
+        run: moodle-plugin-ci grunt
 
       # - name: PHPUnit tests
       #   if: ${{ always() }}
