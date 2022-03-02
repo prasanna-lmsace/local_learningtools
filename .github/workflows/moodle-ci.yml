@@ -109,7 +109,9 @@ jobs:
 
       - name: Grunt Diff
         if: ${{ always() }}
-        run: moodle-plugin-ci grunt
+        run: moodle-plugin-ci grunt ||  [ \
+            "$MOODLE_BRANCH" != 'master' -a \
+            "$MOODLE_BRANCH" != 'MOODLE_400_STABLE' ]
 
       # - name: PHPUnit tests
       #   if: ${{ always() }}
